@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Handson</title>
+  </head>
+  <body>
+    <h1>Function On Js</h1>
+
+      
+        
+         <h2>Q1- create a function with zero parameter having a console statement;</h2>
+        
+    
+
+      <pre>
+        function sum() {
+            console.log(10 + 20);
+          }
+          sum();
+          
+      </pre>
+
+      
+        <h2>Q2-
+          create one function which takes two values as parameter and priint the
+          sum of them as "3+4=7"
+        </h2>
+     
+      <pre>
+        function printSum(a, b) {
+            const result = a + b;
+            console.log(`${a}+${b}=${result}`);
+          }
+          
+          
+          printSum(3, 4);
+
+      </pre>
+
+      <h2>Q3-Screate on arrow function</h2>
+
+      <pre>
+        hello = () => {
+            return "Hello World!";
+          }
+      </pre>
+
+      
+        <pre>
+        var x = 21;
+        var girls = function () {
+          console.log(x);
+          var x = 20;
+        };
+        girls();
+      </pre
+        >
+      
+
+      <!-- <pre><h2>ans - undifine</h2></pre> -->
+
+      
+        <h2>Q4-"Print output: 
+            var x = 21;
+            var girl = function () {
+                console.log(x);
+                var x = 20;
+            };
+            girl ();"
+            </h2>
+          <pre>
+            <pre><h3>ans - undifine</h3></pre>
+            <H2>Q5-</H2>
+var x = 21;
+        g();
+        console.log(x);
+        function g() {
+          console.log(x);
+          var x = 20;
+        }</pre
+          >
+        </h3>
+      
+
+      <pre>
+            ans - undefine and 21  
+        </pre
+      >
+
+    
+        <h3>
+          <pre>
+var x = 21;
+           <H2>Q6-</H2> a();
+            b();
+            
+            function a() {
+              x = 20;
+              console.log(x);
+            }
+            function b() {
+              x = 40;
+              console.log(x);
+            }
+            console.log(x);</pre
+          >
+        </h3>
+      
+
+      <pre>ans - 20,40,40 </pre>
+
+      <li>
+        <h2>Q7-
+          write a function that accapt parameter n and returns factorial of n
+        </h2>
+      </li>
+
+      <pre>
+        function factorial(n) {
+            if (n === 0) {
+              return 1;
+            } else {
+              return n * factorial(n - 1);
+            }
+          }
+          console.log(factorial(5));
+      </pre>
+    </ol>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

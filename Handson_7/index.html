@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Q1-Create a Function</h2>
+    <pre>
+function Check(obj1){
+   obj1.setter = function(){
+     console.log(this.name);
+   };
+}</pre>
+<h2>Q2-Delete a Parameter</h2>
+<pre>
+function Check(obj1) {
+    return delete obj1.rollno;
+}</pre>
+<h2>Q3-Check whether the Package is Dream Package or not</h2>
+<PRE>function Check(obj1) {
+    if(obj1.salary>500000){
+      return "Dream"
+    }
+    else {
+      return "NotDream"
+    }
+}</PRE>
+<H2>Q4-Check whether the Object has a parameter or not</H2>
+<PRE>function Check(obj1) {
+   if(Object.keys(obj1).length === 0){
+     return "false";
+   }
+   else {
+     return "true";
+   }
+}</PRE>
+<h2>Q5-Merge the Objects</h2>
+<pre>function Check(obj1,obj2) {
+    let obj3 = Object.assign({},obj1,obj2);
+    return (obj3);
+    // let obj3 ={
+    //   ...obj1,
+    //   ...obj2
+    // }
+    // obj1.merge(obj2);
+    // return (obj1);
+}</pre>
+<h2>Q6-Object Multiplyer</h2>
+<pre>function Check(a,obj1) {
+obj1.id=obj1.id*a;
+obj1.houseno=obj1.houseno*a;
+return(obj1)
+}</pre>
+<h2>Q7-Find the  sum of Object Members</h2>
+<pre>
+function Check(obj1) {
+    let sum =obj1.p1+obj1.p2+obj1.p3;
+    return sum;
+}</pre>
+<h2>Q8-Check whether the Objects are same or not.</h2>
+<pre>function check(obj1,a,b) {
+    if ( obj1.name ===a && obj1.id ===b){
+      return "true"
+    }
+    else{
+        return "false"
+    }
+}</pre>
+
+</body>
+</html>
