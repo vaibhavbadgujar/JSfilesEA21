@@ -144,7 +144,20 @@
         </div>
         <div class="c2" id="WORDS">GOOD MORNING !! WAKE UP!!</div>
         <div class="flex">
-          <button onclick="vicky()" class="x11" id="b111" onmouseenter="hover()">Set Alarm</button>
+          <button onclick="vicky()" class="x11" id="b111" onmousemove="myFunction(event)" onmouseout="clearCoor()"><p id="demo">Set Alarm</p></button>
+          <script>
+            function myFunction(e) {
+              let coor = "Party time!";
+              document.getElementById("demo").innerHTML = coor;
+            }
+            
+            function clearCoor() {
+            let coor = "Set Alarm";
+              document.getElementById("demo").innerHTML = coor;
+            }
+            
+            </script>
+
           <div class="c4">
             <span> Wake up time:</span><span id="91"> Default</span> <br />
             <span> Lunch time:</span><span id="92"> Default </span><br />

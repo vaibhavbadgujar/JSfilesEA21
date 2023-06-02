@@ -1,0 +1,62 @@
+body{
+    background: url(painted-wooden-plank-textured-backdrop.jpg);
+    color: aliceblue;
+}
+
+.cont{
+    color: goldenrod;
+    font-size: 2em;
+    text-align: center;
+}
+
+.QNS {
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 220px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 15px;
+  }
+ #card1{
+
+    background: url(A1.jpg);
+    
+ }
+ #card2{
+
+    background: url(AA1.jpg);
+ }
+ #card3{
+
+    background: url(AAA1.jpg);
+ }
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 15px;
+  }
+pre{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+fieldset{
+    width: 500px;
+    
+}

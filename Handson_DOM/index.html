@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM ASS</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="cont">
+    <h1>Handson DOM</h1>
+  </div>
+
+  <DIV class="QNS">QN1- Write the code to access element which is having id as "text"</DIV>
+  <br>
+  <fieldset>
+    <legend>ANS-1</legend>
+    <pre>
+    &lt;H1 id="te">Hiii&lt;/H1>
+    &lt;div id="text"&gt;
+    Welcome to my page Enter
+     Submit &lt;/div&gt;    
+  
+    &lt;button onclick="CALLMES()"&gt;
+    SUBMIT &lt;/button&gt; 
+    
+    &lt;script&gt;
+      let text = document.getElementById("text");
+
+      let newtext =
+      "THANKS FOR SUBMIT ";
+
+    function CALLMES() {
+    console.log(text.innerHTML);
+    console.log(text.innerText);
+    text.innerText=newtext;
+    
+      }
+      document.getElementById("te").innerText="Hello"
+    &lt;/script&gt;
+    </pre>
+  </fieldset>
+  <h2>OUTPUT :</h2>
+  <H1 id="te">Hiii</H1>
+  <div id="text"> Welcome to my page Enter Submit </div>
+  <br>
+  <button onclick="CALLMES()">SUBMIT</button>
+  <br><br>
+
+  <hr>
+  <br>
+
+
+  <DIV class="QNS">QN2- Write the code to access element which is having id as "text"</DIV>
+  <br>
+  <fieldset>
+    <legend>ANS-2</legend>
+    <pre>
+    &lt;h1>SMILE&lt;/h1>
+    &lt;h1>FLOWER&lt;/h1>
+    &lt;h1>DANCER&lt;/h1>
+    &lt;h1>FIRE&lt;/h1>
+    &lt;h1>FOOT BOLL&lt;/h1>
+    
+    &lt;script>
+           let p =  document.getElementsByTagName("h1");
+            
+        function CALLME() {
+            
+            console.log(p);
+            console.log(p[0].innerText);
+            console.log(p[1].innerText);
+            console.log(p[2].innerText);
+            console.log(p[4].innerText);
+            p[0].innerText="😃"
+            p[1].innerText="💐🌷🌹" 
+            p[2].innerText="💃🏼"
+            p[3].innerText="🔥"
+            p[4].innerText="⚽"
+           
+       
+        }
+ 
+        &lt;/script>
+</pre>
+
+  </fieldset>
+  <h2>OUTPUT :</h2>
+  <h1>SMILE</h1>
+  <h1>FLOWER</h1>
+  <h1>DANCER</h1>
+  <h1>FIRE</h1>
+  <h1>FOOT BOLL</h1>
+
+
+  <button onclick="CALLME()">SUBMIT</button><br><br>
+  <hr>
+  <br>
+
+  <DIV class="QNS">QN3 Write the code to access element which is having class as "box"</DIV>
+  <br>
+  <fieldset>
+    <legend>ANS-3</legend>
+    <pre>
+    &lt;div class="example color">
+    &lt;p>Box Class</p>
+    &lt;/div>
+    &lt;script>
+      const collection = document.
+      getElementsByClassName
+      ("example color");
+    
+      collection[0].style.backgroundColor = "red";
+      &lt;/script>
+</pre>
+  </fieldset>
+  <h2>OUTPUT :</h2>
+  <br>
+
+  <div class="example color">
+    <p>Box Class</p>
+  </div>
+  <br>
+  <hr><br>
+  <DIV class="QNS">QN4 -Change the heading from "Hello" to "Hello World" using DOM functions</DIV>
+  <fieldset>
+    <legend>ANS-4</legend>
+    <pre>
+
+        &lt;h1 id="myHeading">Hello&lt;/h1>
+        &lt;script>
+        const heading = document.getElementById
+        ("myHeading");
+        heading.textContent = "Hello World";
+        &lt;/script>
+
+
+        &lt;h1   onmousemove="myFunction(event)" 
+        onmouseout="clearCoor()" id="demo">Hello&lt;/H1>
+
+
+        &lt;script>
+        function myFunction() {
+        let coor = "Hello World!";
+        document.getElementById
+        ("demo").innerHTML = coor;
+        }
+        function clearCoor() {
+        let coor = "Hii Hello";
+        document.getElementById
+        ("demo").innerHTML = coor;
+        }
+        &lt;/script>
+
+</pre>
+  </fieldset>
+  <h2>OUTPUT :</h2>
+  <h1 id="myHeading">Hello</h1>
+
+
+  <h1 onmousemove="myFunction(event)" onmouseout="clearCoor()" id="demo">
+    <p>Hello</p>
+  </H1>
+  <hr><br>
+
+  <DIV class="QNS">QN5 -Create an HTML page having content as Hello world and a button named Replace Text. When user
+    will click on this button page content should be changed to "Welcome to Elevation academy"</DIV>
+  <fieldset>
+    <legend>ANS-4</legend>
+    <pre>
+    &lt;button onclick="REPLACE()">REPLACE &lt;/button> 
+    &lt;br> &lt;br>
+    &lt;div id="CON">Hello world&lt;/div>    
+    &lt;script>
+      let contant = document.getElementById("CON");
+
+      let newcontant ="Welcome to Elevation academy";
+
+      function REPLACE() {
+     console.log(contant.innerHTML);
+    console.log(contant.innerText);
+    contant.innerText=newcontant;
+      }
+      &lt;/script>
+</pre>
+  </fieldset>
+  <h2>OUTPUT :</h2>
+
+  <button onclick="REPLACE()">REPLACE </button>
+  <br> <br>
+  <div id="CON">Hello world</div>
+
+  <br>
+  <hr>
+  <br>
+
+  <DIV class="QNS">QN6 -Add one style attribute and give text color as red and id attribute and give the id value as
+    "heading" in the above given h1 tag using DOM functions</DIV>
+  <fieldset>
+    <legend>ANS-6</legend>
+    <pre>
+    &lt;h1 id="heading">HOLLO&lt;/h1>
+
+    &lt;button type="button" onclick=
+    "document.getElementById('heading').style.color 
+    = 'red'">
+    Click Me!&lt;/button>
+  
+</pre>
+  </fieldset>
+  <h2>OUTPUT :</h2>
+  <h1 id="heading">HOLLO</h1>
+
+  <button type="button" onclick="document.getElementById('heading').style.color = 'red'">
+    Click Me!</button>
+  <br><br><br>
+  <hr>
+  <br>
+  <DIV class="QNS">QN7 - Create three cards on HTML page and arrange them using flex property in row or horizontal
+    direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the
+    cards arrangement should be changed to vertical direction.</DIV>
+  <fieldset>
+    <legend>ANS-7</legend>
+    <pre>
+&lt;div class="container">
+&lt;div class="card">Card 1&lt;/div>
+&lt;div class="card">Card 2&lt;/div>
+&lt;div class="card">Card 3&lt;/div>
+&lt;/div>
+&lt;button id="changeFlexDirection">
+Change Flex Direction&lt;/button>
+
+&lt;script>
+  
+function changeFlexDirection() {
+  var container = document.querySelector('.container');
+  if (container.style.flexDirection === 'row') {
+    container.style.flexDirection = 'column';
+  } else {
+    container.style.flexDirection = 'row';
+  }
+}
+
+             OR 
+
+
+    let container = document.querySelector('.container');
+let count = true;
+function  changeFlexDirection(){
+  if(count){
+    container.style.display = 'block';
+  count = false ;
+}
+else{
+  container.style.display = 'flex';
+  count = true;
+}
+}
+
+    &lt;/script>
+
+    
+
+</pre>
+  </fieldset>
+  <br>
+  <h2>OUTPUT :</h2>
+  <div class="container">
+    <div class="card " id="card1"></div>
+    <div class="card " id="card2"></div>
+    <div class="card " id="card3"></div>
+  </div>
+  <button onclick="changeFlexDirection()">Change Flex Direction</button>
+ 
+
+<br><br><hr><br>
+
+<DIV class="QNS">QN8 -	What's the difference between window vs document?</DIV>
+<br>
+<fieldset><legend>ANS-8</legend>
+    <table border="2px">
+      <tr>
+        <td>Sr.no</td>
+        
+        <td>document</td>
+        <td>window</td>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>It represent the document loaded inside the window or browser.</td>
+        <td>It represent the browser window in which you are seeing the content.</td>
+
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>The properties related to it are stord in the document object.</td>
+        <td>The properties related to it are stord in the window object. </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Is is loaded after the loading window becouse the window contain a document.</td>
+        <td>It is loaded befor the document becouse of the window contain document.</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>It is root element of the document object model.</td>
+        <td>The window is the gloabal element for all object, function etc.</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>We can not access window objcet properties inside the document.</td>
+        <td>Wc can access document objcet properties inside the window. </td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>Example: document.title will return the title of the document </td>
+        <td>Example: window.documenty.title will return the title of the document.</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td><pre>logically:
+                  document:{properties}
+        </pre></td>
+        <td><pre>logically:
+                  window:{
+                    document:{properties}
+                  }
+</pre></td>
+      </tr>
+      
+    </table>
+    </fieldset>
+
+<DIV class="QNS">QN9 -	Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second </DIV>
+<fieldset><legend>ANS-9</legend>
+<pre>
+    &lt;h1 id="t">00:00:00&lt;/h1>
+    &lt;script>
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      minutes = minutes &lt; 10 ? '0' + minutes : minutes;
+      seconds = seconds &lt; 10 ? '0' + seconds : seconds;
+      var time = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+      document.getElementById('clock').innerHTML = time;
+      setTimeout(updateClock, 1000);
+    }
+    updateClock();
+            
+    &lt;/script>
+</pre>
+</fieldset>
+<h2>OUTPUT :</h2>
+<h1 id="clock">00:00:00</h1>
+        
+            <script>
+           
+            </script>
+            <br>
+            <hr>
+            <br>
+            <DIV class="QNS">QN10 </DIV>
+            <BR>
+            <a href="game.html"target="_blank">GAME</a>
+            <BR>
+            <BR>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

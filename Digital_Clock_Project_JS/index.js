@@ -56,7 +56,7 @@ function vicky(){
     let hrs=l.getHours();
     
 if(hrs===parseInt(morning.value)){
-    PIC.style.backgroundImage="url(./morning.png)"
+    PIC.style.backgroundImage="url(./morning.png.svg)"
     WORDS.innerText = "GOOD MORNING!! WAKE UP !!"
 }
 else if(hrs==parseInt(nighttime.value)){
