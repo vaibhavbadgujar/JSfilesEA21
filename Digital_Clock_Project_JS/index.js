@@ -56,7 +56,8 @@ function vicky(){
     let hrs=l.getHours();
     
 if(hrs===parseInt(morning.value)){
-    PIC.style.backgroundImage="url(./morning.png.svg)"
+
+   PIC.style.backgroundImage="url(./morning.png.svg)"
     WORDS.innerText = "GOOD MORNING!! WAKE UP !!"
 }
 else if(hrs==parseInt(nighttime.value)){
@@ -79,11 +80,10 @@ let mornigtext = morning.options[morning.selectedIndex].textContent;
     let mornig1 =document.getElementById("91")
     mornig1.textContent = mornigtext;
     
-
-
     let lunchtext = lunch.options[lunch.selectedIndex].textContent;
     let lunch1 = document.getElementById("92")
     lunch1.textContent = lunchtext;
+    
     let naptext = naptime.options[naptime.selectedIndex].textContent;
     let nap1 = document.getElementById("93")
     nap1.textContent = naptext;
