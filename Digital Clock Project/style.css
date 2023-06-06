@@ -1,9 +1,18 @@
 body {
     background-color: #3d087b;
-    box-sizing: border-box;
-    height: 850px;
-    width: 1105px;
+    
   }
+  .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+
+    
+}
   .left {
     position: relative;
   }

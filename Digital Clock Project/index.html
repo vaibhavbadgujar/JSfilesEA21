@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    
- 
-    <title>DIGITAL CLOCK</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+
+
+  <title>DIGITAL CLOCK</title>
+</head>
+
+<body>
+  <div class="container">
     <section class="left">
       <img src="./pic/clock_logo.png" alt="Clock heading" id="titleimg" />
       <br /><br /><br />
@@ -20,7 +23,7 @@
             <label for="alarm1">Set wake up time</label> &nbsp; &nbsp; &nbsp;
             &nbsp;
             <select name="Morning Alarm" id="alarm1">
-                <option>Default</option>
+              <option>Default</option>
               <option value="12 AM - 1 AM">12 AM - 1 AM</option>
               <option value="1 AM - 2 AM">1 AM - 2 AM</option>
               <option value="2 AM - 3 AM">2 AM - 3 AM</option>
@@ -55,7 +58,7 @@
             <label for="alarm2">Set lunch time</label> &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp;&nbsp;
             <select name="Afternoon Alarm" id="alarm2">
-                <option>Default</option>
+              <option>Default</option>
               <option value="12 AM - 1 AM">12 AM - 1 AM</option>
               <option value="1 AM - 2 AM">1 AM - 2 AM</option>
               <option value="2 AM - 3 AM">2 AM - 3 AM</option>
@@ -90,7 +93,7 @@
             <label for="alarm3">Set nap time</label> &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp;
             <select name="Evening Alarm" id="alarm3">
-                <option>Default</option>
+              <option>Default</option>
               <option value="12 AM - 1 AM">12 AM - 1 AM</option>
               <option value="1 AM - 2 AM">1 AM - 2 AM</option>
               <option value="2 AM - 3 AM">2 AM - 3 AM</option>
@@ -125,7 +128,7 @@
             <label for="alarm4">Set night time</label> &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp;
             <select name="Night Alarm" id="alarm4">
-                <option>Default</option>
+              <option>Default</option>
               <option value="12 AM - 1 AM">12 AM - 1 AM</option>
               <option value="1 AM - 2 AM">1 AM - 2 AM</option>
               <option value="2 AM - 3 AM">2 AM - 3 AM</option>
@@ -154,7 +157,9 @@
           </form>
         </div>
       </div>
-      <div class="leftbox2"><h1 id="boxChange1"></h1></div>
+      <div class="leftbox2">
+        <h1 id="boxChange1"></h1>
+      </div>
       <button id="alarmBtn">Set Alarm</button>
       <div class="leftbox3">
         Wake Up Time : <span id="time1"></span> <br /><br />
@@ -183,6 +188,8 @@
         <img src="./pic/Component 30 – 1.png" alt="breakfast time" />
       </div>
     </section>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
