@@ -1,526 +1,516 @@
 body {
-    background-color: #3d087b;
-    
-  }
-  .container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-
-    
+  background-color: #3d087b;
+  box-sizing: border-box;
+  height: 850px;
+  width: 1105px;
 }
-  .left {
-    position: relative;
+.left {
+  position: relative;
+}
+#titleimg {
+  width: 204px;
+  height: 77px;
+  position: absolute;
+  top: 34px;
+  left: 124px;
+}
+.leftbox1 {
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 566px;
+  height: 363px;
+  position: absolute;
+  top: 149px;
+  left: 124px;
+}
+.leftbox2 {
+  background-color: #65349ede;
+  border: 1px solid #3d087bde;
+  border-radius: 10px;
+  width: 555px;
+  height: 65px;
+  position: absolute;
+  top: 527px;
+  left: 124px;
+  color: #ffffff;
+  font-size: 21px;
+  font-family: "Baumans", cursive;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+.left button {
+  border: 1px solid #3d087b;
+  border-radius: 6px;
+  background-image: linear-gradient(
+    to right,
+    #6e54ec,
+    #cb52f8,
+    #fc5eff,
+    #f1a7c5
+  );
+  width: 299px;
+  height: 50px;
+  position: absolute;
+  top: 640px;
+  left: 124px;
+  color: #ffffff;
+  font-size: 24px;
+}
+.leftbox3 {
+  display: inline;
+  color: #f25cfe;
+  background-color: #65349ede;
+  border: 1px solid #3d087bde;
+  border-radius: 10px;
+  width: 233px;
+  height: 117px;
+  position: absolute;
+  top: 630px;
+  left: 437px;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.leftbox1 select {
+  width: 290px;
+  height: 35px;
+  font-size: 14px;
+  color: #3d087bde;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+}
+.logo1 {
+  background-image: url(./pic/wake_up.png);
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+#morning form {
+  font-size: 16px;
+  position: absolute;
+  top: 31px;
+  left: 90px;
+  color: #3d087b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gap1 {
+  position: absolute;
+  top: 75px;
+  left: 47px;
+  border: 1px solid #c2c2c2;
+  height: 33px;
+  width: 0px;
+}
+.logo2 {
+  background-image: url(./pic/lunch_time.png);
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 123px;
+  left: 30px;
+}
+#afternoon form {
+  font-size: 16px;
+  position: absolute;
+  top: 128px;
+  left: 90px;
+  color: #3d087b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gap2 {
+  position: absolute;
+  top: 170px;
+  left: 47px;
+  border: 1px solid #c2c2c2;
+  height: 33px;
+  width: 0px;
+}
+.logo3 {
+  background-image: url(./pic/nap_time.png);
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 220px;
+  left: 30px;
+}
+#evening form {
+  font-size: 16px;
+  position: absolute;
+  top: 220px;
+  left: 90px;
+  color: #3d087b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gap3 {
+  position: absolute;
+  top: 265px;
+  left: 47px;
+  border: 1px solid #c2c2c2;
+  height: 33px;
+  width: 0px;
+}
+.logo4 {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 310px;
+  left: 30px;
+}
+#night form {
+  font-size: 16px;
+  position: absolute;
+  top: 310px;
+  left: 90px;
+  color: #3d087b;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.right {
+  position: relative;
+}
+.rightbox1 {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 536px;
+  height: 130px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 20px;
+  left: 706px;
+  z-index: 5;
+}
+.rightbox1 span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3d087b;
+  font-size: 16px;
+  position: absolute;
+  top: 55px;
+  left: 25px;
+}
+.time {
+  background-image: url(./pic/timeline.svg);
+  width: 80px;
+  height: 75px;
+  text-align: center;
+  color: #8a11bf;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
+.hour {
+  position: absolute;
+  top: 15px;
+  left: 100px;
+}
+.min {
+  position: absolute;
+  top: 15px;
+  left: 210px;
+}
+.sec {
+  position: absolute;
+  top: 15px;
+  left: 320px;
+}
+#ampm {
+  background-image: url(./pic/AM_svg.svg);
+  width: 82px;
+  height: 90px;
+  position: absolute;
+  top: 15px;
+  left: 430px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 28px;
+  padding-top: 28px;
+  background-repeat: no-repeat;
+}
+#colon1 {
+  color: #8a11bf;
+  position: absolute;
+  top: 35px;
+  left: 190px;
+  font-size: 38px;
+}
+#colon2 {
+  color: #8a11bf;
+  position: absolute;
+  top: 35px;
+  left: 300px;
+  font-size: 38px;
+}
+.box1 {
+  width: 430px;
+  height: 130px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  opacity: 0.71;
+  background-color: #ffffff;
+  position: absolute;
+  top: 40px;
+  left: 766px;
+  z-index: 3;
+}
+.box2 {
+  width: 379px;
+  height: 130px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  opacity: 0.22;
+  background-color: #ffffff;
+  position: absolute;
+  top: 55px;
+  left: 785px;
+  z-index: 2;
+}
+.rightbox2 {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 536px;
+  height: 125px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 200px;
+  left: 706px;
+  color: #8e53f0;
+  font-family: "Baumans", cursive;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+}
+#boxChange2 {
+  position: relative;
+  top: 18px;
+}
+.rightbox3 {
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  width: 536px;
+  height: 345px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 340px;
+  left: 707px;
+  padding-top: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  body {
+    margin: 30px;
   }
   #titleimg {
-    width: 204px;
-    height: 77px;
-    position: absolute;
-    top: 34px;
-    left: 124px;
-  }
-  .leftbox1 {
-    background-color: #ffffff;
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    width: 566px;
-    height: 363px;
-    position: absolute;
-    top: 149px;
-    left: 124px;
-  }
-  .leftbox2 {
-    background-color: #65349ede;
-    border: 1px solid #3d087bde;
-    border-radius: 10px;
-    width: 555px;
-    height: 65px;
-    position: absolute;
-    top: 527px;
-    left: 124px;
-    color: #ffffff;
-    font-size: 21px;
-    font-family: "Baumans", cursive;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-bottom: 20px;
-  }
-  .left button {
-    border: 1px solid #3d087b;
-    border-radius: 6px;
-    background-image: linear-gradient(
-      to right,
-      #6e54ec,
-      #cb52f8,
-      #fc5eff,
-      #f1a7c5
-    );
-    width: 299px;
-    height: 50px;
-    position: absolute;
-    top: 640px;
-    left: 124px;
-    color: #ffffff;
-    font-size: 24px;
-  }
-  .leftbox3 {
-    display: inline;
-    color: #f25cfe;
-    background-color: #65349ede;
-    border: 1px solid #3d087bde;
-    border-radius: 10px;
-    width: 233px;
-    height: 117px;
-    position: absolute;
-    top: 630px;
-    left: 437px;
-    padding: 10px;
-    padding-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-  }
-  .leftbox1 select {
-    width: 290px;
-    height: 35px;
-    font-size: 14px;
-    color: #3d087bde;
-    border: 1px solid #ededed;
-    border-radius: 4px;
-  }
-  .logo1 {
-    background-image: url(./pic/wake_up.png);
-    width: 34px;
-    height: 34px;
+    width: 230px;
+    height: 85px;
     position: absolute;
     top: 30px;
     left: 30px;
   }
+  .leftbox1 {
+    width: 290px;
+    height: 380px;
+    position: absolute;
+    top: 400px;
+    left: 10px;
+  }
+  .leftbox1 select {
+    width: 150px;
+    height: 35px;
+    font-size: 18px;
+  }
   #morning form {
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
     top: 31px;
-    left: 90px;
-    color: #3d087b;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .gap1 {
-    position: absolute;
-    top: 75px;
-    left: 47px;
-    border: 1px solid #c2c2c2;
-    height: 33px;
-    width: 0px;
-  }
-  .logo2 {
-    background-image: url(./pic/lunch_time.png);
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 123px;
-    left: 30px;
+    left: 75px;
   }
   #afternoon form {
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
     top: 128px;
-    left: 90px;
-    color: #3d087b;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .gap2 {
-    position: absolute;
-    top: 170px;
-    left: 47px;
-    border: 1px solid #c2c2c2;
-    height: 33px;
-    width: 0px;
-  }
-  .logo3 {
-    background-image: url(./pic/nap_time.png);
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 220px;
-    left: 30px;
+    left: 75px;
   }
   #evening form {
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
     top: 220px;
-    left: 90px;
-    color: #3d087b;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .gap3 {
-    position: absolute;
-    top: 265px;
-    left: 47px;
-    border: 1px solid #c2c2c2;
-    height: 33px;
-    width: 0px;
-  }
-  .logo4 {
-    background-image: url(./pic/night1.jpg);
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 310px;
-    left: 30px;
+    left: 73px;
   }
   #night form {
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
-    top: 310px;
-    left: 90px;
-    color: #3d087b;
-    font-family: Arial, Helvetica, sans-serif;
+    top: 307px;
+    left: 73px;
   }
-  .right {
-    position: relative;
+  .leftbox2 {
+    width: 285px;
+    height: 100px;
+    position: absolute;
+    top: 800px;
+    left: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+  .left button {
+    width: 295px;
+    height: 70px;
+    position: absolute;
+    top: 940px;
+    left: 10px;
+    font-size: 30px;
+  }
+  .leftbox3 {
+    width: 275px;
+    height: 117px;
+    position: absolute;
+    top: 1030px;
+    left: 10px;
+    padding: 10px;
+    padding-bottom: 20px;
   }
   .rightbox1 {
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    width: 536px;
-    height: 130px;
-    background-color: #ffffff;
+    width: 300px;
+    height: 150px;
     position: absolute;
-    top: 20px;
-    left: 706px;
-    z-index: 5;
+    top: 95px;
+    left: 0px;
   }
   .rightbox1 span {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3d087b;
-    font-size: 16px;
+    font-size: 18px;
     position: absolute;
-    top: 55px;
-    left: 25px;
+    top: 20px;
+    left: 120px;
   }
   .time {
-    background-image: url(./pic/timeline.svg);
-    width: 80px;
-    height: 75px;
-    text-align: center;
-    color: #8a11bf;
+    width: 57px;
+    height: 67px;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 20px;
+    padding-top: 15px;
   }
   .hour {
     position: absolute;
-    top: 15px;
-    left: 100px;
+    top: 50px;
+    left: 13px;
   }
   .min {
     position: absolute;
-    top: 15px;
-    left: 210px;
+    top: 50px;
+    left: 90px;
   }
   .sec {
     position: absolute;
-    top: 15px;
-    left: 320px;
-  }
-  #ampm {
-    background-image: url(./pic/AM_svg.svg);
-    width: 82px;
-    height: 90px;
-    position: absolute;
-    top: 15px;
-    left: 430px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 28px;
-    padding-top: 28px;
-    background-repeat: no-repeat;
+    top: 50px;
+    left: 165px;
   }
   #colon1 {
-    color: #8a11bf;
     position: absolute;
-    top: 35px;
-    left: 190px;
-    font-size: 38px;
+    top: 65px;
+    left: 75px;
+    font-size: 40px;
   }
   #colon2 {
-    color: #8a11bf;
     position: absolute;
-    top: 35px;
-    left: 300px;
-    font-size: 38px;
+    top: 65px;
+    left: 150px;
+    font-size: 40px;
+  }
+  #hrs span {
+    position: absolute;
+    top: 50px;
+    left: 7px;
+  }
+  #min span {
+    position: absolute;
+    top: 50px;
+    left: 12px;
+  }
+  #sec span {
+    position: absolute;
+    top: 50px;
+    left: 12px;
+  }
+  #ampm {
+    width: 57px;
+    height: 55px;
+    position: absolute;
+    top: 50px;
+    left: 235px;
+    font-size: 26px;
+    padding-top: 25px;
   }
   .box1 {
-    width: 430px;
-    height: 130px;
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    opacity: 0.71;
-    background-color: #ffffff;
+    width: 250px;
+    height: 80px;
     position: absolute;
-    top: 40px;
-    left: 766px;
-    z-index: 3;
+    top: 180px;
+    left: 23px;
   }
   .box2 {
-    width: 379px;
-    height: 130px;
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    opacity: 0.22;
-    background-color: #ffffff;
-    position: absolute;
-    top: 55px;
-    left: 785px;
-    z-index: 2;
-  }
-  .rightbox2 {
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    width: 536px;
-    height: 125px;
-    background-color: #ffffff;
+    width: 193px;
+    height: 80px;
     position: absolute;
     top: 200px;
-    left: 706px;
-    color: #8e53f0;
-    font-family: "Baumans", cursive;
-    text-align: center;
-    font-size: 21px;
-    font-weight: bold;
+    left: 47px;
+  }
+  .rightbox2 {
+    width: 290px;
+    height: 115px;
+    position: absolute;
+    top: 1170px;
+    left: 10px;
+    font-size: 20px;
+  }
+  .rightbox3 {
+    width: 290px;
+    height: 250px;
+    position: absolute;
+    top: 1315px;
+    left: 10px;
+  }
+  .rightbox3 img {
+    width: 285px;
+    height: 245px;
   }
   #boxChange2 {
     position: relative;
-   
+    
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 1200px) {
+  body {
+    margin: 60px;
+  }
+  .rightbox1 {
+    position: absolute;
+    top: 785px;
+    left: 138px;
+  }
+  .rightbox1 span {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+  }
+  .box1 {
+    position: absolute;
+    top: 800px;
+    left: 183px;
+  }
+  .box2 {
+    position: absolute;
+    top: 818px;
+    left: 207px;
+  }
+  .rightbox2 {
+    position: absolute;
+    top: 975px;
+    left: 138px;
   }
   .rightbox3 {
-    border: 1px solid #ededed;
-    border-radius: 10px;
-    width: 536px;
-    height: 345px;
-    background-color: #ffffff;
     position: absolute;
-    top: 340px;
-    left: 707px;
-    padding-top: 15px;
+    top: 1130px;
+    left: 138px;
   }
-  @media only screen and (min-width: 320px) and (max-width: 576px) {
-    body {
-      margin: 30px;
-    }
-    #titleimg {
-      width: 230px;
-      height: 85px;
-      position: absolute;
-      top: 30px;
-      left: 30px;
-    }
-    .leftbox1 {
-      width: 290px;
-      height: 380px;
-      position: absolute;
-      top: 400px;
-      left: 10px;
-    }
-    .leftbox1 select {
-      width: 150px;
-      height: 35px;
-      font-size: 18px;
-    }
-    #morning form {
-      font-size: 20px;
-      position: absolute;
-      top: 31px;
-      left: 75px;
-    }
-    #afternoon form {
-      font-size: 20px;
-      position: absolute;
-      top: 128px;
-      left: 75px;
-    }
-    #evening form {
-      font-size: 20px;
-      position: absolute;
-      top: 220px;
-      left: 73px;
-    }
-    #night form {
-      font-size: 20px;
-      position: absolute;
-      top: 307px;
-      left: 73px;
-    }
-    .leftbox2 {
-      width: 285px;
-      height: 100px;
-      position: absolute;
-      top: 800px;
-      left: 10px;
-      font-size: 18px;
-      padding-left: 10px;
-    }
-    .left button {
-      width: 295px;
-      height: 70px;
-      position: absolute;
-      top: 940px;
-      left: 10px;
-      font-size: 30px;
-    }
-    .leftbox3 {
-      width: 275px;
-      height: 117px;
-      position: absolute;
-      top: 1030px;
-      left: 10px;
-      padding: 10px;
-      padding-bottom: 20px;
-    }
-    .rightbox1 {
-      width: 300px;
-      height: 150px;
-      position: absolute;
-      top: 95px;
-      left: 0px;
-    }
-    .rightbox1 span {
-      font-size: 18px;
-      position: absolute;
-      top: 20px;
-      left: 120px;
-    }
-    .time {
-      width: 57px;
-      height: 67px;
-      font-size: 30px;
-      padding-top: 15px;
-    }
-    .hour {
-      position: absolute;
-      top: 50px;
-      left: 13px;
-    }
-    .min {
-      position: absolute;
-      top: 50px;
-      left: 90px;
-    }
-    .sec {
-      position: absolute;
-      top: 50px;
-      left: 165px;
-    }
-    #colon1 {
-      position: absolute;
-      top: 65px;
-      left: 75px;
-      font-size: 40px;
-    }
-    #colon2 {
-      position: absolute;
-      top: 65px;
-      left: 150px;
-      font-size: 40px;
-    }
-    #hrs span {
-      position: absolute;
-      top: 50px;
-      left: 7px;
-    }
-    #min span {
-      position: absolute;
-      top: 50px;
-      left: 12px;
-    }
-    #sec span {
-      position: absolute;
-      top: 50px;
-      left: 12px;
-    }
-    #ampm {
-      width: 57px;
-      height: 55px;
-      position: absolute;
-      top: 50px;
-      left: 235px;
-      font-size: 26px;
-      padding-top: 25px;
-    }
-    .box1 {
-      width: 250px;
-      height: 80px;
-      position: absolute;
-      top: 180px;
-      left: 23px;
-    }
-    .box2 {
-      width: 193px;
-      height: 80px;
-      position: absolute;
-      top: 200px;
-      left: 47px;
-    }
-    .rightbox2 {
-      width: 290px;
-      height: 115px;
-      position: absolute;
-      top: 1170px;
-      left: 10px;
-      font-size: 20px;
-    }
-    .rightbox3 {
-      width: 290px;
-      height: 250px;
-      position: absolute;
-      top: 1315px;
-      left: 10px;
-    }
-    .rightbox3 img {
-      width: 285px;
-      height: 245px;
-    }
-    #boxChange2 {
-      position: relative;
-      top: 8px;
-    }
-  }
-  @media only screen and (min-width: 577px) and (max-width: 1200px) {
-    body {
-      margin: 60px;
-    }
-    .rightbox1 {
-      position: absolute;
-      top: 785px;
-      left: 138px;
-    }
-    .rightbox1 span {
-      position: absolute;
-      top: 55px;
-      left: 20px;
-    }
-    .box1 {
-      position: absolute;
-      top: 800px;
-      left: 183px;
-    }
-    .box2 {
-      position: absolute;
-      top: 818px;
-      left: 207px;
-    }
-    .rightbox2 {
-      position: absolute;
-      top: 975px;
-      left: 138px;
-    }
-    .rightbox3 {
-      position: absolute;
-      top: 1130px;
-      left: 138px;
-    }
-  }
+}
