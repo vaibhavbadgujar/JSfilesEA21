@@ -7,9 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Promise Async Await</h1>
+    <h1>Promise</h1>
     <h3>Q1.Write one example explaining how you can write a callback function.</h3>
+    <pre>
+        function cubeFunc(num, operation){
+            setTimeout(function(){
+                let ans=1;
+                ans = num**3;
+                operation(num, ans);
+            }, 2000)
+        }
+        
+        cubeFunc(9, function(no, ans){
+            console.log("The cube of ",no," is = ",ans);
+        })
+        
 
+        <em>//OUTPUT: The cube of 9 is = 729</em>
+    </pre>
+    <br >
+    
+    <br >
     <br>
     <hr>
     <h3>Q2."Write a callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
@@ -90,22 +108,225 @@
         <br>
         <hr>
         <h3>Q5.Create examples to explain callback function</h3>
-
-        <br>
-        <hr>
-        <h3>Q6.Create examples to explain callback hell function</h3>
-
-        <br>
-        <hr>
-        <h3>Q7.Create examples to explain promises function</h3>
-
-        <br>
-        <hr>
-        <h3>Q8.Create examples to explain async await function</h3>
-        <br>
-        <hr>
-
-        <h3>Q9.Create examples to explain promise.all function</h3>
+        <pre>
+            A callback function is a function passed to another function as an argument. Callbacks promote asynchronous programming
+    
+            function findSum(num1, num2, operation1){
+                setTimeout(function(){
+                    let sum = num1 + num2;
+                    operation1(num1, num2, sum);
+                }, 2000)
+            }
+            
+            findSum(26, 23, <strong>function(num1, num2, ans1){</strong>
+                console.log("The sum of",num1,"&",num2,":",ans1);
+            })
+    
+            //The sum of 26 & 23 : 49
+    
+            <em>In this example of adding two numbers, there is 1 callback function (shown in bold).</em>
+        </pre>
+        <br />
+        <hr />
+        <br />
+    
+        <p>
+          <strong> Q.6) Create example to explain callback hell function </strong>
+        </p>
+        <pre>
+            function findSum(num1, num2, operation1){
+                setTimeout(function(){
+                    let sum = num1 + num2;
+                    operation1(num1, num2, sum);
+                }, 2000)
+            }
+            
+            function squareOfSum(num, operation2){
+                setTimeout(function(){
+                    let ans = num * num;
+                    operation2(num, ans);
+                }, 2000)
+            }
+            
+            findSum(26, 23, <strong>function(num1, num2, ans1){</strong>
+                console.log("The Sum of",num1,"&",num2,":",ans1);
+                squareOfSum(ans1, <strong>function(num, ans2){</strong>
+                    console.log("The Square of",num,":",ans2);
+                })
+            })
+    
+            //The Sum of 26 & 23 : 49
+            //The Square of 49 : 2401
+    
+            <em>In this example of adding two numbers and then squaring its sum, there are 2 callback functions (shown in bold).
+            And since one callback function is nested within another, a callback hell has formed.</em>
+        </pre>
+        <br />
+        <hr />
+        <br />
+    
+        <p><strong> Q.7) Create example to explain promises function </strong></p>
+        <pre>
+            function findSum(num1,num2){
+                let pr = new Promise(function(res,rej){
+                    setTimeout(function(){
+                        let sum = num1 + num2;
+                        if(isNaN(sum))
+                        {
+                            rej("Try Again! Enter a valid number");
+                        }
+                        else
+                        {
+                            res(sum);
+                        }
+                    }, 2000)
+                })
+                return pr;
+            }
+            
+            findSum(26,23).then(function(ans){
+                console.log("Sum =", ans);
+            }).catch(function(err){
+                console.log(err);
+            })
+    
+            //Sum = 49
+    
+            <em>
+            Promise Function are the functions that return a promise object. A promise is an object which represents the completion or failure of an asynchronous operation
+            along with its result. They come with in-built error handling. Here inside the findSum() function, promise object "pr" has been created.
+            Then the function is called and ".then" block is attached to handle the resolved part and ".catch" handles the reject part.</em>
+        </pre>
+        <br />
+        <hr />
+        <br />
+    
+        <p>
+          <strong> Q.8) Create example to explain async await function </strong>
+        </p>
+        <pre>
+            function findSum(num1,num2){
+                let pr = new Promise(function(res,rej){
+                    setTimeout(function(){
+                        let sum = num1 + num2;
+                        if(isNaN(sum))
+                        {
+                            rej("Try Again! Enter a valid number");
+                        }
+                        else
+                        {
+                            res(sum);
+                        }
+                    }, 2000)
+                })
+                return pr;
+            }
+    
+            async function answer(){
+                try
+                {
+                    let finalAns = await findSum(37,26);
+                    console.log("The Sum = ",finalAns);
+                }
+                catch
+                {
+                    console.log("Please enter a valid number!");
+                }
+            }
+            answer();
+    
+            //The Sum =  63
+    
+            <em>
+            An async function "answer()" is created, inside which there are two blocks: try block that handles the resolved result, and catch block to handle the rejected result.
+            Async Functions always return a promise. Inside the try block, we use the "await" keyword. The "await" keyword can only be used inside functions that are declared with "async".
+            "await" pauses the execution of the function, waiting for a promise to be reolved.
+            </em>
+        </pre>
+        <br />
+        <hr />
+        <br />
+    
+        <p>
+          <strong> Q.9) Create example to explain promise.all function </strong>
+        </p>
+        <pre>
+            function add(x1,x2){
+                let p1 = new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        let sum = x1 + x2;
+                        if(isNaN(sum))
+                        {
+                            rej("Enter a valid number");
+                        }
+                        else
+                        {
+                            res(sum);
+                        }
+                    },2000)
+                })
+                return p1;
+            }
+            
+            function mul(y1,y2){
+                let p2 = new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        let product = y1 * y2;
+                        if(isNaN(product))
+                        {
+                            rej("Enter a valid number");
+                        }
+                        else
+                        {
+                            res(product);
+                        }
+                    },2000)
+                })
+                return p2;
+            }
+            
+            function subtract(z1,z2){
+                let p3 = new Promise((res,rej)=>{
+                    setTimeout(()=>{
+                        let diff=0;
+                        if(z1>z2)
+                        {
+                            diff = z1 - z2;
+                        }
+                        else
+                        {
+                            diff = z2 - z1;
+                        }
+                        
+                        if(isNaN(diff))
+                        {
+                            rej("Enter a valid number");
+                        }
+                        else
+                        {
+                            res(diff);
+                        }
+                    },2000)
+                })
+                return p3;
+            }
+            
+            Promise.all([add(3,5),mul(13,24),subtract(12,56)]).then((result)=>{
+                console.log(result);
+                console.log(result[0]);
+                console.log(result[1]);
+                console.log(result[2]);
+            }).catch((error)=>{
+                console.log(error);
+            })
+    
+            //[ 8, 312, 44 ]
+            //8
+            //312
+            //44
+        </pre>
+        <br />
+        <hr />
 
     <script src="./script.js"></script>
 </body>
