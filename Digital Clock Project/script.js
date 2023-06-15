@@ -45,7 +45,7 @@ let alarm4 = document.getElementById("alarm4");
 alarmBtn.addEventListener("mouseover", function (event) {
   alarmBtn.style.backgroundImage =
     "linear-gradient(to left,#6E54EC,#CB52F8,#FC5EFF,#F1A7C5)";
-  alarmBtn.innerText = "Party Time!";
+alarmBtn.innerText = "Party Time!";
 });
 
 alarmBtn.addEventListener("mouseout", function (event) {
@@ -88,11 +88,11 @@ alarmBtn.addEventListener("click", function (event) {
         msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
        
        /* chngImg.src = "./pic/Component 30 – 1.svg' alt='breakfast time'";*/
-        chngImg.innerHTML = "<img src='./pic/Component 30 – 1.svg' alt='breakfast time'>";
+        chngImg.innerHTML = "<img src='./pic/morning.png' alt='breakfast time'>";
       }
       if (parseInt(alarm2.value) == mer) {
         msg2.innerText = "LET'S HAVE SOME LUNCH !!";
-        chngImg.innerHTML = "img src='./pic/Component 31 – 1.svg' alt='lunch time'";
+        chngImg.innerHTML = "img src='./pic/evening.png' alt='lunch time'";
       }
       if (parseInt(alarm3.value) == mer) {
         msg2.innerText = "STOP YAWNING, GET SOME TEA... ITS JUST EVENING!";
@@ -100,7 +100,7 @@ alarmBtn.addEventListener("click", function (event) {
       }
       if (parseInt(alarm4.value) == mer) {
         msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
-        chngImg.innerHTML ="<img src='./pic/Component 32 – 1.svg' alt='good night'>";
+        chngImg.innerHTML ="<img src='./pic/night.png' alt='good night'>";
       }
     }
   } else {
@@ -116,11 +116,11 @@ alarmBtn.addEventListener("click", function (event) {
       ) {
         if (parseInt(alarm1.value) == mer) {
           msg2.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
-          chngImg.innerHTML ="<img src='./pic/Component 30 – 1.svg' alt='breakfast time'>";
+          chngImg.innerHTML ="<img src='./pic/morning.png' alt='breakfast time'>";
         }
         if (parseInt(alarm2.value) == mer) {
           msg2.innerText = "LET'S HAVE SOME LUNCH !!";
-          chngImg.innerHTML = "<img src='./pic/Component 31 – 1.svg' alt='lunch time'>";
+          chngImg.innerHTML = "<img src='./pic/evening.png' alt='lunch time'>";
         }
         if (parseInt(alarm3.value) == mer) {
           msg2.innerText = "STOP YAWNING... GET SOME TEA !";
@@ -128,7 +128,7 @@ alarmBtn.addEventListener("click", function (event) {
         }
         if (parseInt(alarm4.value) == mer) {
           msg2.innerText = "CLOSE YOUR EYES AND GO TO SLEEP";
-          chngImg.innerHTML ="<img src='./pic/Component 32 – 1.svg' alt='good night'>";
+          chngImg.innerHTML ="<img src='./pic/night.png' alt='good night'>";
         }
       }
     }
