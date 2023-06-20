@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+              <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <div>Javascript Interview Ques/Answers of Day1</div>
+              <h1>Q1: Difference between "==" and "===" operators.</h1>
+              <p>ANS:-- <br> Both are comparsion operators and return boolen values."==" is used to compare values but "===" is used to compare value and datatype both.</p>
+              <pre>                   var a = 10;
+                   var b ="10";
+                   console.log(a==b); 
+                   console.log(a===b);
+              </pre>
+              <p>Explanation: console.log(a==b)give result true because the value i.e.10 is same in a and b.But console.log(a===b) give result false because type of a is number and type of  b is string.</p>
+
+              <h1>Q2: What are the differences between var,let and const?</h1>
+              <p>ANS: <br> <h4>Var:</h4>
+                            <ol type="1"> <li>Var can be redeclared and reintialised.
+                                          </li>
+                                          <li>Var perform hoisting.</li>
+                                          <li>Var is global scope and function scope.</li>
+                                          <li>Used introduce before ES6</li>
+                            </ol></p>
+              <p><h4>Let:</h4>
+              <ol type="1">
+                            <li>Let can be reintialised but cannot be redeclared.</li>
+                            <li>let not perform hoisting</li>
+                            <li>It is under temporal dead zone.</li>
+                            <li>Introduce in ES6</li>
+              </ol></p>
+              <p><h4>Const:</h4>
+              <ol type="1">
+                            <li>Const cannot be redeclared and reintialised</li>
+                            <li>Const not perform hoisting</li>
+                            <li>It is under temporal dead zone.</li>
+                            <li>Introduce in ES6</li>
+              </ol></p>
+
+              <h1>Q3: What is hoisting??</h1>
+              <p>ANS: <br> Hoisting is the javascript mechanism where variable and function declaration are moved to top of their scope before the code execution.Remember that Javascript only hoists declaration , not initialisation..</p>
+              <pre>               console.log(a);
+                var a=10;
+               </pre>
+               <p>Explanation: In this, var move to top of their scope but Javascript only hoist declaration.In this initialisation occur after console.log. So, it give error.</p>
+
+<h1>Q4: What is a Temporal dead Zone?</h1>
+<p>ANS: <br>Temporal dead zone is the behaviour in Javascript that occurs when declaring a variable with let and const keyword but not with var keyword.A let or const keyword is said to be in TDZ from start of the block until the code execution where the variable is declared but not initalised.</p>
+
+<h1>Q5: What is meant by first class functions??</h1>
+<p>ANS: <br> Assign to a variable in a function is called first class function.</p>
+<pre>      let P = function Sum(){
+                   console.log("Hii");
+               return "Hello"
+      }
+            P()</pre>
+            <p>It give an output-- Hello</p>
+
+<h1>Q6: What are pure functions??</h1>
+<p>ANS: <br> 
+     <ol type="i">
+          <li>It always return the same value if same argument is passed.</li>
+          <li>It does not depend upon data during the program.</li>
+     </ol>
+</p>
+<pre>    function Sum(a,b){
+                    console.log(a*b);
+         }
+        Sum(10,20)
+     </pre>
+     <p>EXplanation: It give an output 200 .It is an example of pure function because when we passed the same argument ,then it return a fixed value .</p>
+
+         <script src=""></script>     
+</body>
+</html>

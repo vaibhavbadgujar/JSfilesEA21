@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+              <link rel="stylesheet" href="style.css">
+              
+</head>
+<body>
+              <div>Javascript Interview Ques/Ans of Day2 </div>
+              <h1>Q1: What is execution context?</h1>
+<p>ANS: <br> Each and every browser having Javascript engine.For example,Google is having V8 engine and Mozilla firefox having Spider Monkey.Javascript engine uses a call stack and create a special environment to handle the execution of javascript code.This environment is called execution context.
+              <br><br>
+              There are 2 kinds of execution context:
+              <br>
+              1.Global execution context <br>
+              2.Function execution context. <br><br>
+There are 2 phases of each execution context <br>
+A: Creation phase <br>
+B: Execution phase <br><br>
+# Under Creation phase, Memory allocation ,variable declaration and function declaration are have. <br><br>
+ # Under Execution phase, Javascript code is executed line by line..
+</p>
+
+<h1>Q2: WHat is event loop and call stack?</h1>
+<p>ANS: <br> <h3>Event loop:</h3>Event loop is constantly running process that monitors both callback queue and call stack.All Web API's like settimeout and set interval are not directly inside the execution context.Fastly,they move to the callback queue.Event loop checks that call stack is empty or not.If call stack is empty,then the function pushed from callback queue to the call stack. </p>
+<p><h3>Call stack:</h3>
+Call stack is the mechanism for an interpreter to keep track of its place in a script with calls  multiple function - what function is being currently run and what function are called from within the function.And it stores global and function Execution context..</p>
+
+<h1>Q3: What is creation phase and execution context?</h1>
+<p>ANS: <br> <h3>Creation phase:</h3>Under Creation phase, Memory allocation ,variable declaration and function declaration are have. <br><br>
+ <h3>Execution phase:</h3> Under Execution phase, Javascript code is executed line by line..
+</p>
+
+
+
+<h1>Q4:What is spread operator? </h1>
+ANS: <br><p>Spread operator allows us to destructure the non-primitive datatype like array and object to access the elements individually. </p>
+<pre>
+              
+//SPread operator:
+Array: 
+const arr=[2,3,4,5,6,7,8,9];
+const arr1=[1,11,12];
+ 
+ console.log(...arr[i]);
+
+ const arr2=[...arr,...arr1];
+ console.log(arr2);
+
+
+//Function:
+
+ const arr3 =[1,11,12,10];
+
+function Sum(a,b,c){
+               console.log(a,b,c);
+               return a+b+c
+ }
+console.log(Sum(...arr3));
+
+//Object:
+
+ const obj1 = {
+              name:"Shikha",
+              age:24
+}
+
+ const obj2 ={
+              Course : "MERN",
+               ...obj1
+ }
+ console.log(obj1);
+ console.log(obj2);
+
+
+</pre>
+
+<h1>Q5: What is the use of setTimeout?</h1>
+ANS : <br><p>The settimeout() method executes a block of code after the specified time.The method executes the code only once.</p>
+<pre>//SetTimeout:
+               function Display(){
+              let time =new Date();
+                            let hr = time.toLocaleTimeString();
+              
+               console.log(hr);
+                           setTimeout(() => {
+                                         Display();
+                             }, 1000);
+               }
+    Display()</pre>
+
+<h1>Q6: What are callbacks?</h1>
+ANS : <br><p>Callback function is the function that is passed inside another function as an argument.</p>
+<pre>function fun(a){
+                            console.log("HI...")
+                            a()
+               }
+              
+               function fun1(){
+                           console.log("Hello");
+     }</pre>  
+
+<h1>Q7: What is callback hell?</h1>
+ANS : <br><p>Callback hell is the pattern with mutiple callback functions which makes code hard to read and debug when dealing with asynchronous operations.</p>
+
+<h1>Q8: Differnce between undefined vs not defined vs NaN?</h1>
+<p><h3>Undefined:</h3>
+Undefined occurs when the variable is declared but not initialised</p>
+<p><h3>Not defined:</h3>
+    Not defined occurs when the variable not properly declared inside the code at given point of time with using of let,const and var keyword.</p>
+<p><h3>NaN:</h3>
+    Not a number</p>
+<pre>Example of NaN:
+              console.log(10/"5")
+   This give an output NaN because here 5 make a string but 5 is number.
+</pre>
+
+</body>
+</html>
