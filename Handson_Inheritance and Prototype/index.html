@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+              <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+              <div>Inheritance and Prototype</div>
+
+              <!-- //Q1: -->
+<h3>Q1:Create 2 objects -parent and child.Attach methods to parent and use those methods in child object.</h3>
+<pre>ANS: const Parent ={
+              display: function(){
+            console.log(`${this.name} and age is ${this.age} `);
+              }
+      }
+
+      const child1 = Object.create(Parent)
+     child1.name="Nishu";
+     child1.age=25;
+      child1.display()
+      
+
+     const child2 = Object.create(Parent)
+     child2.name="Shikha";
+     child2.age=24;
+    child2.display()
+<pre>
+      <p>Explanation: We have to attach child object with the parent function by using the Object.create method...  </p>
+
+
+<h3>Q2: Write code to explain prototype chaining.</h3>
+<pre> ANS:       const GFAther={
+                            Sayhello : function(){
+                                  console.log("Hey Grand Father !!!");
+                            }   
+                    }
+                    
+                    const Father = Object.create(GFAther);
+                    Father.Hello = function(){
+                                  console.log("Say Hi to Father !!!");
+                    }
+                    
+                    const You = Object.create(Father);
+                    You.Hi = function(){
+                                  console.log("Hi...");
+                    }
+                    
+                    You.Sayhello()</pre>
+<p>Explanation: Prototype chaining is the mechanism of javascript object which inherit features to one another.
+ In this Question,You variable inherit the feature from GFAther.Similarly,it also inherit from its own Father..
+ This is an example of prototype chaining..</p> 
+
+ <h3>Q3: Add a method to calculate sum of all elemnets in Array in array's prototype.
+Use that method to calculate sum for multiple arrays.</h3>
+<pre>
+      let newArr = new Array(9,37,269);
+      newArr.__proto__.add = function(arr){
+          let count=0;
+          for(let i=0; i < arr.length; i++)
+          {
+              count += arr[i];
+          }
+          return count;
+      }
+
+      let ans = newArr.add(newArr);
+      console.log(ans); 
+</pre>
+
+<p>OUTPUT IS: 315</p>
+
+
+<h3>Q4: Write a Javascript function to retreive all the names of object's own and inherit properties.</h3>
+<pre> function kpop(name,group,company,gen,fandom)
+      {
+          this.name = name;
+          this.group = group;
+          this.company = company;
+          this.gen = gen;
+          this.fandom = fandom;
+      }
+      
+      kpop.prototype.name1 = "KPOP";
+      
+      let exo = new kpop("EXO","boy group","SM Ent.","3rd gen","exo-l");
+      let exoSC = Object.create(exo);
+      
+      console.log("2 objects have been created: exo and exoSC");
+      console.log("The value of 'name' property for 'exo'--->",exo.name);
+      console.log("The value of inherited 'name' property for 'exo'--->",exo.name1);
+      console.log("The value of 'name' property inherited from parent for 'exoSC'--->",exoSC.name);
+      console.log("The value of 'name' property inherited from grandparent for 'exo'--->",exoSC.name1);
+      
+      exoSC.name2 = "EXO-SC";
+      console.log("The value of 'name' property for 'exo'--->",exoSC.name2);
+      
+      <em>
+     <p>OUTPUT:
+      2 objects have been created: exo and exoSC
+      The value of 'name' property for 'exo'---> EXO
+      The value of inherited 'name' property for 'exo'---> KPOP
+      The value of 'name' property inherited from parent for 'exoSC'---> EXO
+      The value of 'name' property inherited from grandparent for 'exo'---> KPOP
+      The value of 'name' property for 'exo'---> EXO-SC</p>
+<script src="./index.js"></script>
+</body>
+</html>>

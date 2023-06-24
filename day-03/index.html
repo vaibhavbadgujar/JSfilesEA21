@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+              <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+              <div>Javascript Interview Ques/Answers of Day3</div>
+              <h1>Q1:What are promises and why do we need them?</h1>
+              <p>ANS: Promise are used to handle asynchronous operations in javascript.Promise is easy to handle the multiple asynchronous operations.Mutiple callback function would create callback hell that leads to unmanageable code. So, promise provide better error handling than callback.</p>
+              <pre>
+                let myPromise = new Promise((res,rej)=>{ 
+                                          if(true){
+                                                        res("This is New Promise one")
+                                          }
+                                          else{
+                                                        rej("promise rejected")
+                                          }
+                            })
+                            
+                            function funcPromise(){
+                                          return new Promise((resolve,reject)=>{
+                                                        setTimeout(() => {
+                                                              resolve("Promise resolved")        
+                                                        });
+                                          })
+                            }
+                            
+                            Promise.all([myPromise,funcPromise()])
+                            .then((item)=>console.log(item))
+                            .catch((err)=>console.log(err))
+                            </pre>
+                            <p>It give an output - [This is New Promise one, Promise resolved]</p>
+
+
+              <h1>Q2: What is promise Chaining?</h1>
+              <p>Ans:It is technique in javascript to execute multiple asynchronous operations in a specific order by chaining promise together using then method. </p>
+              <pre>
+                function display(num,timeout){
+                      return new Promise((res,rej)=>{
+                            setTimeout(() => {
+                                  console.log(num);
+                                  res("Promise resolved!!")
+                            }, timeout);
+                      })
+                }
+                
+                display(1,1000)
+                .then(()=>display(2,2000))
+                .then(()=>display(3,3000))
+                .then(()=>display(4,4000))
+                .then(()=>display(5,5000))
+                .then((data)=>console.log("Promise completed.."))</pre>
+
+              <h1>Q3: What is DOM?</h1>
+              <p>ANS: DOM(Document object model)is the data representation of objects which comprises structure and content of the document on the web. By using the DOM ,we can change the structure , content and style.</p>
+              <p>There are 5 methods: <br>
+            1.By id name <br>
+              2.By class name <br>
+            3. By tag name <br>
+      4.By Query selector <br>
+5. By Query selector All</p>
+
+<h1>Q4: What are closures? Give an example of closure.</h1>
+<p>ANS: Closures are combination of function bundled together with reference to its lexical environment.</p>
+<pre>
+  
+function outer(){
+  let a=10
+  function inner(){
+                console.log("Hello",a)
+  }
+inner()
+}
+outer();
+
+</pre>
+
+              <h1>Q5:How many operators do we have in JS?</h1>
+              <p>ANS: There are 7 operators in Js. </p><br>
+              <p>1. Arithmetic operator -Addition,subraction,multiply,division,exponential,modulus are have. </p>
+              <p>2. Assignment operators- =,+=,-=,*=,/=,%= are have. </p>
+              <p>3.Bitwise operators - Bitwise OR, bitwise AND ,bitwise NOT, left shift(<<) and right shift(>>)are have.</p>
+              <p>4. Comparison operator - Equal(==) , strict equal(===), not equal(!=) , strict not equal(!==) , greater than,less than,greater than equal,less than equal are have..</p>
+              <p>5. Logical operator - AND(&&) , OR(||) , NOT (!) are have.</p>
+              <p> 6. Ternary operator - (Condition)?"Execute true" : "Execute false" . THis is the syntax of this operator.</p>
+              <p>7. TypeOf operator - it return datatype.</p>
+             <script src="./style.js"></script> 
+</body>
+</html>
