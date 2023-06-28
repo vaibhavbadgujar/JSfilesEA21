@@ -96,7 +96,7 @@ function card1() {
   }
 
 
-/* open new window click on heading tag  */
+/* open new window click on heading tag  or back button  */
 
 function openwindow(id,tit){
    
@@ -167,6 +167,7 @@ function backcard(id) {
     popcar.innerHTML = "bb";
   }
 
+  
 /* delete cord  */
 function delcard(id) {
     // Set the opacity of the elements with the ids `head` and `card` to 1 and display to "flex"
