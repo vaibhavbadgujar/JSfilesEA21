@@ -90,8 +90,7 @@ overflow-y: auto;
 
 /* for cord alignment like container */
 .flexdir{
-  opacity: -1;
-
+ 
   display: flex;            
   flex-wrap: wrap;
   justify-content: space-between;
