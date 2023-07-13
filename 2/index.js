@@ -10,7 +10,7 @@ function additem(){
     let pop1 =document.getElementById("todono")  
     pop1.style.display="flex"
     let cards = document.getElementById("card")
-    cards.style.opacity=.1;
+    cards.style.opacity=-1;
     // pop1.style.textAlign="center"
     
     // let backgr =document.getElementById("opacitych")  
@@ -222,9 +222,9 @@ function addtask(taskid) {
   
     // Set the opacity of the elements with the ids `head` and `card` to 0.1
     let head = document.getElementById("head");
-    head.style.opacity = 0.1;
+    head.style.opacity = -1;
     let cards = document.getElementById("card");
-    cards.style.opacity = 0.1;
+    cards.style.opacity = -1;
   
     // Get the element with the id `${taskid}` and display a form for adding a new task
     let add = document.getElementById(`${taskid}`);
