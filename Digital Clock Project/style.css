@@ -320,14 +320,14 @@ body {
     height: 85px;
     position: absolute;
     top: 30px;
-    left: 30px;
+    left: 55px;
   }
   .leftbox1 {
-    width: 290px;
+    width: 338px;
     height: 380px;
     position: absolute;
     top: 400px;
-    left: 10px;
+    left: 2px;
   }
   .leftbox1 select {
     width: 150px;
@@ -359,7 +359,7 @@ body {
     left: 73px;
   }
   .leftbox2 {
-    width: 285px;
+    width: 325px;
     height: 100px;
     position: absolute;
     top: 800px;
@@ -371,13 +371,13 @@ body {
     width: 295px;
     height: 70px;
     position: absolute;
-    top: 940px;
-    left: 10px;
+    top: 929px;
+    left: 21px;
     font-size: 30px;
   }
   .leftbox3 {
-    width: 275px;
-    height: 117px;
+    width: 319px;
+    height: 157px;
     position: absolute;
     top: 1030px;
     left: 10px;
@@ -385,7 +385,7 @@ body {
     padding-bottom: 20px;
   }
   .rightbox1 {
-    width: 300px;
+    width: 338px;
     height: 150px;
     position: absolute;
     top: 95px;
@@ -395,7 +395,7 @@ body {
     font-size: 18px;
     position: absolute;
     top: 20px;
-    left: 120px;
+    left: 142px;
   }
   .time {
     width: 57px;
@@ -446,30 +446,30 @@ body {
     left: 12px;
   }
   #ampm {
-    width: 57px;
-    height: 55px;
+    width: 60px;
+    height: 67px;
     position: absolute;
     top: 50px;
-    left: 235px;
+    left: 248px;
     font-size: 26px;
     padding-top: 25px;
   }
   .box1 {
-    width: 250px;
+    width: 285px;
     height: 80px;
     position: absolute;
     top: 180px;
     left: 23px;
   }
   .box2 {
-    width: 193px;
+    width: 233px;
     height: 80px;
     position: absolute;
     top: 200px;
     left: 47px;
   }
   .rightbox2 {
-    width: 290px;
+    width: 321px;
     height: 115px;
     position: absolute;
     top: 1170px;
@@ -477,15 +477,15 @@ body {
     font-size: 20px;
   }
   .rightbox3 {
-    width: 290px;
-    height: 250px;
+    width: 318px;
+    height: 272px;
     position: absolute;
     top: 1315px;
     left: 10px;
   }
   .rightbox3 img {
-    width: 285px;
-    height: 245px;
+    width: 316px;
+height: 270px;
   }
   #boxChange2 {
     position: relative;
