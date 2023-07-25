@@ -11,9 +11,7 @@ function additem(){
     pop1.style.display="flex"
     let cards = document.getElementById("card")
     cards.style.opacity=-1;
-    // pop1.style.textAlign="center"
     
-    // let backgr =document.getElementById("opacitych")  
     
     pop1.innerHTML=`
     <nav  class="addview"  >
@@ -194,26 +192,7 @@ function delcard(id) {
   }
 
 /* popup2 for update task update task inside cord 
-function addtask(taskid){   
-    let popcarer =document.getElementById("apper") 
-    popcarer.style.display="none"
-    let head = document.getElementById("head")  
-    
-    head.style.opacity=.1;
-    let cards = document.getElementById("card")
-    cards.style.opacity=.1;
-let add = document.getElementById(`${taskid}`)
-let pop1 =document.getElementById("todono")  
-pop1.style.display="flex"
-pop1.innerHTML =`
-    <nav  class="addview" id="newtripcd">
-    <nav>Add New Task</nav><br>
-    <input type="text" class="tex" id="textsfortask" placeholder="Add New Task">
-    <nav class="ac">
-    <button onclick="cardstask(${taskid})" id="card1" >ADD</button>
-    <button onclick="cancel()" >Cancel</button></nav>
-</nav>`
-}
+
 */
 function addtask(taskid) {
     // Hide the element with the id `apper`
@@ -259,7 +238,7 @@ const da=[];
 function cardstask(taskid){
    
     let newval =document.getElementById("n${id1}") 
-    console.log("vvvvvvvvvvvvvvvvvvv"+newval);
+    console.log("vaibhav"+newval);
     let poc =document.getElementById("newwind")
 
 /* condition for view cord */
