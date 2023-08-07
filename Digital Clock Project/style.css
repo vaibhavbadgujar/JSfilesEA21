@@ -14,7 +14,7 @@ body {
 }
 .container {
   
-  width: 1245px;
+  width: auto;
   height: auto;
 }
 .left {
