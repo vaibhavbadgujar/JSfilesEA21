@@ -52,6 +52,7 @@ body {
   font-weight: bold;
   padding-left: 10px;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 .left button {
   border: 1px solid #3d087b;
@@ -298,7 +299,7 @@ body {
 }
 #boxChange2 {
   position: relative;
-  top: 18px;
+  top: 38px;
 }
 .rightbox3 {
   border: 1px solid #ededed;
@@ -498,7 +499,7 @@ height: 270px;
   }
   .rightbox1 {
     position: absolute;
-    top: 785px;
+    top: 95px;
     left: 138px;
   }
   .rightbox1 span {
@@ -508,12 +509,12 @@ height: 270px;
   }
   .box1 {
     position: absolute;
-    top: 800px;
+    top: 105px;
     left: 183px;
   }
   .box2 {
     position: absolute;
-    top: 818px;
+    top: 115px;
     left: 207px;
   }
   .rightbox2 {
@@ -525,5 +526,24 @@ height: 270px;
     position: absolute;
     top: 1130px;
     left: 138px;
+  }
+  .leftbox3{
+   
+position: absolute;
+top: 838px;
+left: 437px;
+  }
+  .leftbox1{
+    position: absolute;
+    top:331px ;
+
+  }
+  .leftbox2{
+position: absolute;
+top: 720px;
+  }
+  .left button{
+    position: absolute;
+top: 841px;
   }
 }

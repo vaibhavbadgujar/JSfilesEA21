@@ -38,7 +38,7 @@ function function2() {
   // ===========  for Images  =============
   if (hours === parseInt(slotOne)) {
     image = "./pic/morning.png"; // 6:00AM - 10:00AM
-    wakeTime.innerHTML;
+    wakeTime.innerHTML =`GOOD MORNING !! WAKE UP !!`;
   } else if (hours === parseInt(slotTwo)) {
     image = "./pic/lunch_image.png"; // 10:00AM - 2:00PM
     timeText.innerHTML = `GOOD AFTERNOON !! TAKE SOME SLEEP`;
